@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(SoftwareTrainingSupportLibrary)
 
-if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
     if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS "7")
         message(FATAL_ERROR "STSL requires version 7 or newer of the GNU compiler (GCC). You currently have version ${CMAKE_CXX_COMPILER_VERSION}")
     endif()
